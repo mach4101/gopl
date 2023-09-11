@@ -2,25 +2,23 @@ package main
 
 import (
 	"WorkPlace/gopl/chapter2/popcount"
-	"fmt"
 	"testing"
-	"time"
 )
 
-func main() {
-	x := uint64(0x1234567890ABCDEF)
-	start := time.Now()
-	fmt.Println(popcount.PopCount(x))
-	end := time.Since(start)
-
-	fmt.Printf("elapsed: %v\n", end)
-
-	start = time.Now()
-	fmt.Println(popcount.RePopCount(x))
-	end = time.Since(start)
-
-	fmt.Printf("recount elapsed: %v\n", end)
-}
+// func main() {
+// 	x := uint64(0x1234567890ABCDEF)
+// 	start := time.Now()
+// 	fmt.Println(popcount.PopCount(x))
+// 	end := time.Since(start)
+//
+// 	fmt.Printf("elapsed: %v\n", end)
+//
+// 	start = time.Now()
+// 	fmt.Println(popcount.RePopCount(x))
+// 	end = time.Since(start)
+//
+// 	fmt.Printf("recount elapsed: %v\n", end)
+// }
 
 // 注释掉main函数，然后在当前目录的命令行运行：go test -bench=.
 func BenchmarkPopCount(b *testing.B) {

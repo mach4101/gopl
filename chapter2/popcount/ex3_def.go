@@ -28,3 +28,21 @@ func RePopCount(x uint64) int {
 	}
 	return sum
 }
+
+func RePopCountByMove(x uint64) int {
+	sum := 0
+	for x != uint64(0) {
+		sum += int(x & 1)
+		x /= 2
+	}
+	return sum
+}
+
+func RePopCountByBitOp(x uint64) int {
+	count := 0
+	for x != 0 {
+		count++
+		x &= (x - 1)
+	}
+	return count
+}
